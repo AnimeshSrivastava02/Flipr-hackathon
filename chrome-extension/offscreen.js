@@ -1,4 +1,5 @@
 // offscreen.js - hidden page to capture audio and send to backend
+
 let mediaRecorder = null;
 const BACKEND_URL = 'http://127.0.0.1:8000/upload_chunk';
 
@@ -26,7 +27,6 @@ async function startRecording(streamId) {
       video: false
     });
 
-    // Always prefer Opus
     let mimeType = '';
     if (MediaRecorder.isTypeSupported('audio/webm;codecs=opus')) {
       mimeType = 'audio/webm;codecs=opus';
@@ -54,13 +54,13 @@ async function startRecording(streamId) {
       }
     };
 
-    mediaRecorder.onstop = function() {
+    mediaRecorder.onstop = function () {
       stream.getTracks().forEach(t => t.stop());
       mediaRecorder = null;
       console.log('MediaRecorder stopped and cleaned up');
     };
 
-    mediaRecorder.start(5000); // 5-second chunks
+    mediaRecorder.start(5000); // Send 5-second chunks
     console.log('Recording started, mimeType:', mimeType);
   } catch (err) {
     console.error('Failed to start recording', err);
