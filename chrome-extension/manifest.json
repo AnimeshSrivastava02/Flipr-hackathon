@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Free Meeting Transcriber",
+  "description": "Capture meeting audio from any tab and send to local Faster-Whisper backend for free transcription.",
+  "version": "1.0",
+  "permissions": [
+    "tabCapture",
+    "offscreen",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1/*",
+    "http://localhost/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
+

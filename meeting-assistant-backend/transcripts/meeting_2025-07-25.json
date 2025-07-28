@@ -1,0 +1,5 @@
+[
+  {"start": 0, "end": 5, "text": "Let's discuss the Q3 launch", "speaker": "Alice"},
+  {"start": 6, "end": 10, "text": "I'll take the design task", "speaker": "Bob"},
+  {"start": 11, "end": 14, "text": "Great, due by Friday", "speaker": "Alice"}
+]

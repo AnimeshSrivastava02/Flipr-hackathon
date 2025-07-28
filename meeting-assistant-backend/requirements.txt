@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+chromadb
+sentence-transformers
+openai
+langchain
+whisper
+python-dotenv
+groq

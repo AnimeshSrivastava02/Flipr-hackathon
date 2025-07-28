@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: meeting-rag-backend
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    plan: free
+    disk:
+      name: chroma_store
+      mountPath: ./chroma_store
+      sizeGB: 1

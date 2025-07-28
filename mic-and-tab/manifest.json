@@ -1,0 +1,10 @@
+{
+  "name": "Mic Transcriber",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["scripting", "tabs", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
