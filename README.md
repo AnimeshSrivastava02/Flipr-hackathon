@@ -1,2 +1,2 @@
 # Flipr-hackathon
-project submitted by
+project submitted by Animesh,Aarohi,Aarya,Aditya
